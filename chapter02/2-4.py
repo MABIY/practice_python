@@ -1,4 +1,5 @@
-name = "Zoctopus Zhang"
-print(name.upper()) # 全大写
-print(name.lower()) #全小写
-print(name.title()) #首字母大写
+name = "eric"
+
+print(name.lower())
+print(name.upper())
+print(name.title())
