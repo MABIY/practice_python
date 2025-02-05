@@ -1,3 +1,6 @@
+"""一个用来表示汽车的类"""
+
+
 class Car:
     """一次模拟汽车的简单尝试"""
 
@@ -15,8 +18,9 @@ class Car:
 
     def read_odometer(self):
         """打印一条指出汽车行驶里程的消息"""
-        print(f"This car has {self.odometer_reading} miles on it." )
-    def update_odometer(self,mileage):
+        print(f"This car has {self.odometer_reading} miles on it.")
+
+    def update_odometer(self, mileage):
         """
         将里程表读数设置为指定的值
         禁止将里程表读数往回调
@@ -25,15 +29,7 @@ class Car:
             self.odometer_reading = mileage
         else:
             print("You can't roll back an odometer!")
-    def increment_odometer(self,miles):
+
+    def increment_odometer(self, miles):
         """让里程表读数增加指定的量"""
         self.odometer_reading += miles
-
-my_used_car = Car('subaru','outback',2019)
-print(my_used_car.get_descriptive_name())
-
-my_used_car.update_odometer(23_500)
-my_used_car.read_odometer()
-
-my_used_car.increment_odometer(100)
-my_used_car.read_odometer()

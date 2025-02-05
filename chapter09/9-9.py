@@ -69,8 +69,19 @@ class Batter:
         """打印一条描述电池容量的消息"""
         print(f"This car has a {self.battery_size}-kWh battery.")
 
+    def upgrade_battery(self):
+        """Upgrade the battery if possible."""
+        if self.battery_size == 40:
+            self.battery_size = 65
+            print("Upgraded the batter to 65 kWh.")
+        else:
+            print("The Battery is already upgraded.")
 
+
+print("Make an electric car, and check the range:")
 my_leaf = ElectricCar('nissan', 'leaf', 2024)
-print(my_leaf.get_descriptive_name())
-my_leaf.battery.describe_battery()
+my_leaf.battery.get_range()
+
+print("\nUpgrade the battery, and check the range again:")
+my_leaf.battery.upgrade_battery()
 my_leaf.battery.get_range()
